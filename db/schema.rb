@@ -15,7 +15,18 @@ ActiveRecord::Schema.define(version: 20170919123721) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "restaurants", force: :cascade do |t|
+  create_table "restaurants", id: :bigint, default: -> { "nextval('restaurants_id_seq1'::regclass)" }, force: :cascade do |t|
+    t.string "name"
+    t.integer "rating"
+    t.integer "cuisine_id"
+    t.string "address"
+    t.boolean "does_accept_10bis"
+    t.integer "delivery_sla_in_minutes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "restaurants_old", id: :bigint, default: -> { "nextval('restaurants_id_seq'::regclass)" }, force: :cascade do |t|
     t.string "name"
     t.integer "rating"
     t.string "cuisine"
