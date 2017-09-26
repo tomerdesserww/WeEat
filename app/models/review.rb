@@ -3,7 +3,7 @@ class Review < ApplicationRecord
   belongs_to :restaurant
 
   validates :reviewer, :rating, :comment, presence: true
-  validate :rating, inclusion: { in: [0, 1, 2, 3] }
+  validates :rating, inclusion: { in: [0, 1, 2, 3] }
 
   def update_average_rating
     reviews_metadata = restaurant.restaurant_reviews_metadatum
