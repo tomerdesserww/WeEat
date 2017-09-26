@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 20170925104708) do
   end
 
   create_table "restaurant_reviews_metadata", force: :cascade do |t|
-    t.integer "reviewsCount"
-    t.float "avarageScore"
+    t.integer "reviews_count"
+    t.float "avarage_score"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "restaurant_id"
