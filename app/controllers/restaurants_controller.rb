@@ -14,7 +14,6 @@ class RestaurantsController < ApplicationController
                           does_accept_10bis: params.require(:does_accept_10bis),
                           delivery_sla_in_minutes: params.require(:delivery_sla_in_minutes),
                           cuisine_id: params.require(:cuisine_id))
-    restaurant.restaurant_reviews_metadatum = RestaurantReviewsMetadatum.create(reviews_count: 0, avarage_score: 0)
     render json: restaurant
   end
 
