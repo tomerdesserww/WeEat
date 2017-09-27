@@ -4678,3 +4678,7 @@ Processing by ReviewController#index as JSON
 Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 12.6ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m

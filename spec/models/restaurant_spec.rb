@@ -3,11 +3,9 @@ require 'rails_helper'
 RSpec.describe Restaurant, type: :model do
   describe 'create' do
     context 'when succeed' do
+      subject { create(:restaurant) }
       it 'should create a review metadata item' do
-        FactoryGirl.create(:cuisine)
-        restaurant = FactoryGirl.create(:restaurant)
-
-        expect(restaurant.restaurant_reviews_metadatum.reviews_count).to eql(0)
+        expect(subject.restaurant_reviews_metadatum.reviews_count).to eql(0)
       end
     end
   end
@@ -15,7 +13,7 @@ RSpec.describe Restaurant, type: :model do
   describe 'create' do
     context 'when no matching cuisine' do
       it 'should throw an error' do
-        expect { FactoryGirl.create(:restaurant) }.to raise_error
+        expect { FactoryGirl.create(:restaurant, :without_cuisine) }.to raise_error
       end
     end
   end
