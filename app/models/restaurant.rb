@@ -10,6 +10,6 @@ class Restaurant < ApplicationRecord
 
 
   def create_restaurant_metadata
-    RestaurantReviewsMetadatum.create(reviews_count: 0, avarage_score: 0, restaurant_id: id)
+    create_restaurant_reviews_metadatum(reviews_count: 0, avarage_score: 0)
   end
 end
