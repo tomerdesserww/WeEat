@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Restaurants browse application.
+This site allows you to view and filter restaurant by time-to-delivery, 10bis availability and cuisine.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+spec is located in here: 
+https://connect.we.co/display/DIGI/WeEat+-+Training+Project
